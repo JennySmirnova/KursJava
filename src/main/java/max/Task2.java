@@ -22,7 +22,7 @@ public class Task2 {
         System.out.println("Введите число A: ");
         Scanner in =  new Scanner( System.in);
         double A =  in.nextDouble();
-        System.out.println("Введите операцию (+, -, *, /) : ");
+        System.out.println("Введите операцию (+, -, *, /): ");
         char c = in.next().trim().charAt(0);
         System.out.println("Введите число B: ");
         double B =  in.nextDouble();
