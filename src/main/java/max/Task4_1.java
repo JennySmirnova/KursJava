@@ -12,31 +12,28 @@ public class Task4_1 {
     public static void main(String[] args) {
         int n = 20;
         int arr[] =  new int[n];
-        Scanner in =  new Scanner(System.in);
-        for( int i = 0; i < n; i++){
-            System.out.println("Введите любые числа от -10 до 10. \nВведите число "+ (i + 1) +": ");
-            arr[i] = in.nextInt();
-        }
-        System.out.print("Введенный массив: ");
-        for( int i = 0; i < n; i++){
-            System.out.print(arr[i] + " ");
+        System.out.print("Массив случайных элементов:\n");
+            for (int i = 0; i < arr.length; i++) {
+            arr[i] = ((int)(Math.random() * 21) - 10);
+            System.out.print(arr[i]+" ");
         }
 
-        int max =  arr[0], min =  arr[0];
+        int max =  -11, min =  11;
         int indexMax = 0, indexMin = 0;
+
         for( int i =  0; i < n; i++) {
-            if (arr[i] > max){
+            if (arr[i] < 0 && max< arr[i]){
                 max = arr[i];
                 indexMax = i;
             }
-            if (arr[i] < min){
+            if (arr[i] >0 && min> arr[i]) {
                 min = arr[i];
                 indexMin = i;
             }
         }
-        System.out.println("\nМаксималное число max: " + max +"\nМинимальное число min: " + min);
+        System.out.println("\nМаксимальный отрицательный элемент: " + max +"\nМинимальный положительный элемент: " + min);
 
-        System.out.print("Полученный массив с учетом смены min и max чисел местами: \n");
+        System.out.print("Полученный массив с учетом смены min и max элементов местами: \n");
         for( int i= 0; i < n; i++){
             if (arr[i] == max) {
                 arr [i] = min;
