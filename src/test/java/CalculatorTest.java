@@ -1,6 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
-import Task5_7.Calculator
+import Task5_7.Calculator;
 
 import java.lang.reflect.Array;
 public class CalculatorTest {
